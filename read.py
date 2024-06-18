@@ -1,4 +1,4 @@
-fileName = "status.txt"
+fileName = "landinfo.txt"
 
 def spacing(string, desiredlength):
     len(string)
@@ -11,7 +11,6 @@ def readLand():
     lines = file.readlines()    # returns the values as list 
     # lines = file.read()  # It returns the txt file as it is 
 
-
     list = []
     for i in lines:
         list.append(i.strip().split(","))
@@ -20,7 +19,7 @@ def readLand():
     print(" "+"--"*55)
     print("|  Kitta No  |        Location       |   Direction   |     Area     |    Monthly Rent   |     Availability     | ")
     print(" "+"--"*55)
-    print(list)
+    
     for l in range(len(list)):
         
         print("|  "+spacing(list[l][0],10),end="")   

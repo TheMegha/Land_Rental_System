@@ -10,13 +10,10 @@ def user_input():
     search = input("Please select any option:\n1. Rent\n2. Return\n3.Exit\nYour Input: ")
 
     if search =="1" or search.lower()=="rent":
-        print("Thank you for renting.Please enjoy your rented property.")
         info= rent()
         rentedBill(info)
 
-    elif search =="2" or search.lower()=="return":
-        print("Hope you enjoyed your rented property.Please visit again.")
-       
+    elif search =="2" or search.lower()=="return":       
         rentReturn()
 
     elif search =="3" or search.lower()=="exit":

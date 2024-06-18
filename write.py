@@ -2,7 +2,7 @@ from datetime import datetime, date
 from random import randint
 from read import getLandDict,spacing
 
-fileName = "status.txt"
+fileName = "landinfo.txt"
 
 def rentedBill(info):
     lands = getLandDict()
@@ -23,7 +23,7 @@ def rentedBill(info):
         anna = lands[str(rentingList[0])][2]
         rent = lands[str(rentingList[0])][3]
 
-    with open('common.txt', 'w') as file:
+    with open('bill.txt', 'w') as file:
             file.write(
         "----------------------------------------------------- Invoice ----------------------------------------------------"
     )
@@ -71,7 +71,7 @@ def returnedBill(kittaNo):
     if str(kittaNo) not in a:
         return "Invalid property ID."
     
-    with open('common.txt', 'w') as file:
+    with open('bill.txt', 'w') as file:
             file.write(
         "----------------------------------------------------- Invoice ----------------------------------------------------"
     )
@@ -129,17 +129,21 @@ def returnedBill(kittaNo):
 
 
 def writeNewData(d):
-    file = open(fileName, "w")
 
-    for id, val in d.items():
+    fileex = open("landinfo.txt", "w")
+        
+    for each in d:
+        fileex.write(each )
+        for j in d[str(each)] :
+            fileex.write(","+(str(j)).strip())
+        fileex.write("\n")
+   
+    
+    fileex.close()
 
-        file.write(str(id))
 
-        for each in val:
-            file.write( ","+str(each) )
-        file.write("\n")
-
-    file.close()
+t = getLandDict()
+writeNewData(t)
 
 def changeStatus(kittaNo, name, month, status):
     """
@@ -159,9 +163,9 @@ def changeStatus(kittaNo, name, month, status):
     
     if str(status).strip()== "Available": 
         d[kittaNo][7] = "Renting date here"
-        d[kittaNo][4] = " Available"
+        d[kittaNo][4] = "Available"
     else : 
-       d[kittaNo][4] = " Not Available"
+       d[kittaNo][4] = "Not Available"
        d[kittaNo][7]= str(datetime.now().date())
     
     # Write updated data to the file

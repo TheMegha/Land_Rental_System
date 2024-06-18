@@ -1,12 +1,12 @@
 ----------------------------------------------------- Invoice ----------------------------------------------------
 
 
-      Invoice ID:  466641                                                                                  Date: 2024-06-18
+      Invoice ID:  17048                                                                                   Date: 2024-06-18
 
-    Customer Name:      Shivam Thakur                                     
+    Customer Name: Shivam Thakur                                          
 
    ----------------------------------------------------------------------------------------------   
 
 |    KittaNo.   |    Location   |  Direction  |  Anna  |    Rent   |   Duration    |   Extra_duration  |    Fine    |     Total    | 
 
-|  103          |       Lalitpur|       East  |       2|  50000    |  3            |  2                |  55000     |  305000      |
+|  103          |  Lalitpur     |  East       |  2     |  50000    |  4            |  13               |  55000     |  905000      |

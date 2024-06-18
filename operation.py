@@ -11,7 +11,6 @@ def rent():
     phone = input("Enter your phone number: ")
     rentingList = []
     rentingDuration = []
-    print(lands)
 
     while True:
 
@@ -52,7 +51,7 @@ def rent():
 
             try:
 
-                duration = int(input("\nFor how many months he/she wants to rent ? : "))
+                duration = int(input("\nFor how many months the land will be  rented? : "))
 
                 if duration < 1 or duration > 360:
 
@@ -91,7 +90,7 @@ def rentReturn():
             print("\nPlease choose a valid kitta number.")
             continue
         
-        if d[landID][4] == " Available":
+        if d[landID][4] == "Available":
             print("\nThis land has not been rented yet. Please select another land.")
             continue    
         else:

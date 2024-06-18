@@ -1,0 +1,5 @@
+101,Janakpur,North,10,15000,Available,None,0,Renting date here
+102,Patan,South,5,35000,Available,None,0,Renting Date Here
+103,Lalitpur,East,2,50000,Available,None,0,Renting date here
+104,Kalanki,West,2,70000,Available,None,0,On rent
+105,Bhaktapur,North,2,80000,Available,None,0,Renting date here
